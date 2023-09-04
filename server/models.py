@@ -10,6 +10,7 @@ class Plant(db.Model, SerializerMixin):
     name = db.Column(db.String)
     image = db.Column(db.String)
     price = db.Column(db.Float)
+    is_in_stock = db.Column(db.Boolean)
 
     def __repr__(self):
         return f'<Plant {self.name} | Price: {self.price}>'
